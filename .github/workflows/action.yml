@@ -48,15 +48,15 @@ jobs:
         path: target/allure-report 
 
 
-    - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v1.0.8
-      with:
+#    - name: Upload GitHub Pages artifact
+ #     uses: actions/upload-pages-artifact@v1.0.8
+  #    with:
     # Artifact name
-          name: allure-html-report
+   #       name: allure-html-report
     # Path of the directory containing the static assets.
-          path: target/allure-report
+    #      path: target/allure-report
     # Duration after which artifact will expire in days.
-          retention-days: 1
+     #     retention-days: 1
        
   # Deploy job
   deploy:
