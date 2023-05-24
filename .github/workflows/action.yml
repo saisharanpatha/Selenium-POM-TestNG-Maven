@@ -81,7 +81,7 @@ jobs:
         uses: actions/deploy-pages@v2.0.1
         with:
     # GitHub token
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
     # Name of the artifact to deploy
           artifact_name: allure-html-report
     # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
