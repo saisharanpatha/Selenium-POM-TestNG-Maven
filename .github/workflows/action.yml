@@ -73,7 +73,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
     # Artifact name
-          name: allure-html-report
+          name: allure-html-report1
     # Path of the directory containing the static assets.
           path: target/allure-report
     # Duration after which artifact will expire in days.
@@ -85,7 +85,7 @@ jobs:
     # GitHub token
           token: ${{ secrets.GH_TOKEN }}
     # Name of the artifact to deploy
-          artifact_name: allure-html-report
+          artifact_name: allure-html-report1
     # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
           preview: true
          
