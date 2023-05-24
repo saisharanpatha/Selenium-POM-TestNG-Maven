@@ -48,15 +48,7 @@ jobs:
         path: target/allure-report 
 
 
-    - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-    # Artifact name
-          name: allure-html-report
-    # Path of the directory containing the static assets.
-          path: target/allure-report
-    # Duration after which artifact will expire in days.
-          retention-days: 1
+
        
   # Deploy job
   deploy:
@@ -76,6 +68,16 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:  
+    
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+    # Artifact name
+          name: allure-html-report
+    # Path of the directory containing the static assets.
+          path: target/allure-report
+    # Duration after which artifact will expire in days.
+          retention-days: 1
          
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v2.0.1
@@ -85,7 +87,7 @@ jobs:
     # Name of the artifact to deploy
           artifact_name: allure-html-report
     # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
-          preview: false
+          preview: true
          
     
     
