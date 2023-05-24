@@ -1,5 +1,3 @@
-
-
 name: Java CI with Maven
 
 on:
@@ -63,7 +61,7 @@ jobs:
   # Deploy job
   deploy:
     # Add a dependency to the build job
-    needs: Run_Tests
+    needs: test
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
