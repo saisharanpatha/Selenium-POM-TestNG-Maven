@@ -46,6 +46,12 @@ jobs:
       with:
         name: allure-html-report
         path: target/allure-report 
+    - name: Setup assets
+      run: |
+        mkdir public ${{ github.run_number }}
+        mv target/allure-report/* ./${{ github.run_number }}/
+        mv ./${{ github.run_number }} ./public/
+
         
     - name: Deploy report to Github Pages
       if: always()
@@ -58,8 +64,8 @@ jobs:
       env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: target/allure-report
-          destination_dir: ${{ github.run_number }}
+          PUBLISH_DIR: ./public
+
           
     - name: Get repository information
       id: repo_info
