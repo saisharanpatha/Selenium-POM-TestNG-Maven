@@ -1,0 +1,101 @@
+[ {
+  "uid" : "ef8cec9bf8cf462c",
+  "name" : "setUp",
+  "time" : {
+    "start" : 1685029131236,
+    "stop" : 1685029131239,
+    "duration" : 3
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d768726269d5384",
+  "name" : "TC002_SelectFlightOption",
+  "time" : {
+    "start" : 1685029131366,
+    "stop" : 1685029131366,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "d77c7a51a865804e",
+  "name" : "TC001_VerifyHeaderContent",
+  "time" : {
+    "start" : 1685029131365,
+    "stop" : 1685029131373,
+    "duration" : 8
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "2b6c5ad3f9fadbf5",
+  "name" : "TC005_VerifyHeaderContent",
+  "time" : {
+    "start" : 1685029131394,
+    "stop" : 1685029131395,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "c805c7be0ba90c90",
+  "name" : "TC003_VerifyHeaderContent",
+  "time" : {
+    "start" : 1685029131387,
+    "stop" : 1685029131390,
+    "duration" : 3
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "5a5b9a21ff384771",
+  "name" : "TC003_CheckifLogoisPresent",
+  "time" : {
+    "start" : 1685029131371,
+    "stop" : 1685029131371,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "5d01a269e40596cc",
+  "name" : "TC004_SelectFlightOption",
+  "time" : {
+    "start" : 1685029131383,
+    "stop" : 1685029131388,
+    "duration" : 5
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "8319b2eb2cf2713a",
+  "name" : "TC002_SearchFligh",
+  "time" : {
+    "start" : 1685029131382,
+    "stop" : 1685029131384,
+    "duration" : 2
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "128cdf7013d152ca",
+  "name" : "TC001_CheckifLogoisPresent",
+  "time" : {
+    "start" : 1685029131353,
+    "stop" : 1685029131359,
+    "duration" : 6
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "5e109ec8f83a103",
+  "name" : "tearDown",
+  "time" : {
+    "start" : 1685029131439,
+    "stop" : 1685029131439,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
