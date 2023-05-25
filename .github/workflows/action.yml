@@ -48,16 +48,21 @@ jobs:
         path: target/allure-report 
         
         
-    - name: Move Artifact to Separate Folder
-      run: |
-          mkdir -p artifacts  # Create a separate folder for each deployment
-          echo ${{ github.run_id }}
-          cp -R target/allure-report artifacts/${{ github.run_number }}  # Move the artifact to the folder with the unique branch name
+ #   - name: Move Artifact to Separate Folder
+  #    run: |
+   #       mkdir -p artifacts  # Create a separate folder for each deployment
+    #      echo ${{ github.run_id }}
+     #     cp -R target/allure-report artifacts/${{ github.run_number }}  # Move the artifact to the folder with the unique branch name
 
     - name: Commit and Push Artifact
       run: |
           git config user.name "saisharanpatha"
           git config user.email "psaisharan12@gmail.com"
+          git clone https://github.com/saisharanpatha/Selenium-POM-TestNG-Maven.git -b gh-pages
+          git checkout -b gh-pages
+          mkdir -p artifacts  # Create a separate folder for each deployment
+          echo ${{ github.run_id }}
+          cp -R target/allure-report artifacts/${{ github.run_number }} 
           git add .
           git commit -m "Deploy artifact for branch ${{ github.run_number }}"
           git push origin gh-pages  # Adjust to your branch name
