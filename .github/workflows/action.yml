@@ -58,7 +58,7 @@ jobs:
       env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: CardUpAutomationFramework/target/allure-report
+          PUBLISH_DIR: target/allure-report
           destination_dir: ${{ github.run_number }}
           
     - name: Get repository information
