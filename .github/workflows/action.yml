@@ -47,25 +47,35 @@ jobs:
         name: allure-html-report
         path: target/allure-report 
         
-        
- #   - name: Move Artifact to Separate Folder
-  #    run: |
-   #       mkdir -p artifacts  # Create a separate folder for each deployment
-    #      echo ${{ github.run_id }}
-     #     cp -R target/allure-report artifacts/${{ github.run_number }}  # Move the artifact to the folder with the unique branch name
-
-    - name: Commit and Push Artifact
+    - name: Deploy report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      with:
+          emptyCommits: true
+          keepFiles: true
+          forceOrphan: false
+          tagOverwrite: false
+      env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: CardUpAutomationFramework/target/allure-report
+          destination_dir: ${{ github.run_number }}
+          
+    - name: Get repository information
+      id: repo_info
       run: |
-          git config user.name "saisharanpatha"
-          git config user.email "psaisharan12@gmail.com"
-          git clone https://github.com/saisharanpatha/Selenium-POM-TestNG-Maven.git -b gh-pages
-          git checkout -b gh-pages
-          mkdir -p artifacts  # Create a separate folder for each deployment
-          echo ${{ github.run_id }}
-          cp -R target/allure-report artifacts/${{ github.run_number }} 
-          git add .
-          git commit -m "Deploy artifact for branch ${{ github.run_number }}"
-          git push origin gh-pages  # Adjust to your branch name
+          echo "::set-output name=repo::$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)"
+          echo "::set-output name=owner::$(echo $GITHUB_REPOSITORY | cut -d '/' -f 1)"
+
+    - name: Set environment variables
+      run: |
+          echo "REPO_NAME=${{ steps.repo_info.outputs.repo }}" >> $GITHUB_ENV
+          echo "REPO_OWNER=${{ steps.repo_info.outputs.owner }}" >> $GITHUB_ENV
+
+    - name: Display Allure report URL
+      run: |
+          echo "Allure report URL: https://${{ env.REPO_OWNER }}.github.io/${{ env.REPO_NAME }}/${{ github.run_number }}/index.html"
+
           
           
          
