@@ -1,0 +1,194 @@
+{
+  "9e511900971abe9fdecdcded9ac157d7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ad2c815c5cf94d27",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226107,
+        "stop" : 1685028226107,
+        "duration" : 0
+      }
+    } ]
+  },
+  "55e1ba4519377c4a3ed77fe8a248b73c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c72272d88a45e490",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226089,
+        "stop" : 1685028226099,
+        "duration" : 10
+      }
+    } ]
+  },
+  "96eeda65de649f1b82a45f226a8d3ef4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "61420dfd8fdbaed",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226105,
+        "stop" : 1685028226105,
+        "duration" : 0
+      }
+    } ]
+  },
+  "92e608c3bb593398b2663f41d422697b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a96b79068111f811",
+      "status" : "broken",
+      "statusDetails" : "The driver executable does not exist: /home/runner/work/Selenium-POM-TestNG-Maven/Selenium-POM-TestNG-Maven/C:/Users/Workspace/FressCRMAutomation/drivers/chromedriver.exe",
+      "time" : {
+        "start" : 1685028226001,
+        "stop" : 1685028226003,
+        "duration" : 2
+      }
+    } ]
+  },
+  "cd356eae1b44a9c4caba5bd4d44183a1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "344de9e730b7d3c3",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1685028226180,
+        "stop" : 1685028226181,
+        "duration" : 1
+      }
+    } ]
+  },
+  "a6372e09549e15c333a1285c58eb782a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7d8ae2b5a64ec533",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226108,
+        "stop" : 1685028226110,
+        "duration" : 2
+      }
+    } ]
+  },
+  "8982f762d1086c5c4de08402c2374e35" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f8a579833ebba107",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226082,
+        "stop" : 1685028226085,
+        "duration" : 3
+      }
+    } ]
+  },
+  "eccf15916ae748958ffbdf05a16ec55b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "70a79ba51eabb3b0",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226107,
+        "stop" : 1685028226107,
+        "duration" : 0
+      }
+    } ]
+  },
+  "61ae46c29a04e2a8c1e8238f76d36254" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b7127e2b51cee0ed",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226091,
+        "stop" : 1685028226099,
+        "duration" : 8
+      }
+    } ]
+  },
+  "df4ff0b82b76517ed4e5c89c990bff57" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fbcc2d574b2a2e2a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1685028226105,
+        "stop" : 1685028226105,
+        "duration" : 0
+      }
+    } ]
+  }
+}

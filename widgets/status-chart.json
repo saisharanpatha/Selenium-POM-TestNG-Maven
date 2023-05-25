@@ -1,0 +1,101 @@
+[ {
+  "uid" : "344de9e730b7d3c3",
+  "name" : "tearDown",
+  "time" : {
+    "start" : 1685028226180,
+    "stop" : 1685028226181,
+    "duration" : 1
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7d8ae2b5a64ec533",
+  "name" : "TC005_VerifyHeaderContent",
+  "time" : {
+    "start" : 1685028226108,
+    "stop" : 1685028226110,
+    "duration" : 2
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "70a79ba51eabb3b0",
+  "name" : "TC004_SelectFlightOption",
+  "time" : {
+    "start" : 1685028226107,
+    "stop" : 1685028226107,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "b7127e2b51cee0ed",
+  "name" : "TC002_SelectFlightOption",
+  "time" : {
+    "start" : 1685028226091,
+    "stop" : 1685028226099,
+    "duration" : 8
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "61420dfd8fdbaed",
+  "name" : "TC002_SearchFligh",
+  "time" : {
+    "start" : 1685028226105,
+    "stop" : 1685028226105,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "fbcc2d574b2a2e2a",
+  "name" : "TC003_CheckifLogoisPresent",
+  "time" : {
+    "start" : 1685028226105,
+    "stop" : 1685028226105,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "c72272d88a45e490",
+  "name" : "TC001_VerifyHeaderContent",
+  "time" : {
+    "start" : 1685028226089,
+    "stop" : 1685028226099,
+    "duration" : 10
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "f8a579833ebba107",
+  "name" : "TC001_CheckifLogoisPresent",
+  "time" : {
+    "start" : 1685028226082,
+    "stop" : 1685028226085,
+    "duration" : 3
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "a96b79068111f811",
+  "name" : "setUp",
+  "time" : {
+    "start" : 1685028226001,
+    "stop" : 1685028226003,
+    "duration" : 2
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ad2c815c5cf94d27",
+  "name" : "TC003_VerifyHeaderContent",
+  "time" : {
+    "start" : 1685028226107,
+    "stop" : 1685028226107,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+} ]

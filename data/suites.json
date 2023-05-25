@@ -1,0 +1,151 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "RegressionSuite",
+    "children" : [ {
+      "name" : "Testing",
+      "children" : [ {
+        "name" : "com.crm.qa.testcases.FlightTestCases",
+        "children" : [ {
+          "name" : "setUp",
+          "uid" : "a96b79068111f811",
+          "parentUid" : "c8aa17729de5a335af80209e1c4f936a",
+          "status" : "broken",
+          "time" : {
+            "start" : 1685028226001,
+            "stop" : 1685028226003,
+            "duration" : 2
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC001_CheckifLogoisPresent",
+          "uid" : "f8a579833ebba107",
+          "parentUid" : "c8aa17729de5a335af80209e1c4f936a",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226082,
+            "stop" : 1685028226085,
+            "duration" : 3
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC002_SelectFlightOption",
+          "uid" : "b7127e2b51cee0ed",
+          "parentUid" : "c8aa17729de5a335af80209e1c4f936a",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226091,
+            "stop" : 1685028226099,
+            "duration" : 8
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC003_CheckifLogoisPresent",
+          "uid" : "fbcc2d574b2a2e2a",
+          "parentUid" : "c8aa17729de5a335af80209e1c4f936a",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226105,
+            "stop" : 1685028226105,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC004_SelectFlightOption",
+          "uid" : "70a79ba51eabb3b0",
+          "parentUid" : "c8aa17729de5a335af80209e1c4f936a",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226107,
+            "stop" : 1685028226107,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "tearDown",
+          "uid" : "344de9e730b7d3c3",
+          "parentUid" : "c8aa17729de5a335af80209e1c4f936a",
+          "status" : "broken",
+          "time" : {
+            "start" : 1685028226180,
+            "stop" : 1685028226181,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c8aa17729de5a335af80209e1c4f936a"
+      }, {
+        "name" : "com.crm.qa.testcases.SearchFlightTestCases",
+        "children" : [ {
+          "name" : "TC001_VerifyHeaderContent",
+          "uid" : "c72272d88a45e490",
+          "parentUid" : "d2b0352bf17c9bab4c89ce59a5e19db3",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226089,
+            "stop" : 1685028226099,
+            "duration" : 10
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC002_SearchFligh",
+          "uid" : "61420dfd8fdbaed",
+          "parentUid" : "d2b0352bf17c9bab4c89ce59a5e19db3",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226105,
+            "stop" : 1685028226105,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC003_VerifyHeaderContent",
+          "uid" : "ad2c815c5cf94d27",
+          "parentUid" : "d2b0352bf17c9bab4c89ce59a5e19db3",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226107,
+            "stop" : 1685028226107,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC005_VerifyHeaderContent",
+          "uid" : "7d8ae2b5a64ec533",
+          "parentUid" : "d2b0352bf17c9bab4c89ce59a5e19db3",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1685028226108,
+            "stop" : 1685028226110,
+            "duration" : 2
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "d2b0352bf17c9bab4c89ce59a5e19db3"
+      } ],
+      "uid" : "06d57a21df753cde855783d004019d84"
+    } ],
+    "uid" : "c1b365eb70bc076d97d473b77b9d8983"
+  } ],
+  "name" : "suites"
+}
