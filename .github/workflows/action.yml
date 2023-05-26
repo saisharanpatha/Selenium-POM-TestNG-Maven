@@ -63,11 +63,11 @@ jobs:
         name: allure-html-report
         path: ./public
 
-    - name: Create directory for reports
-      run: mkdir -p target/allure-reports/${{ github.run_number }}
+ #   - name: Create directory for reports
+ #     run: mkdir -p target/allure-reports/${{ github.run_number }}
 
-    - name: Copy reports to deployment directory
-      run: cp -R target/allure-report/* target/allure-reports/${{ github.run_number }}
+#    - name: Copy reports to deployment directory
+#      run: cp -R target/allure-report/* target/allure-reports/${{ github.run_number }}
 
 
 
