@@ -39,5 +39,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
     outputs: ${{ steps.deployment.outputs.page_url }}
-             ${{ steps.deploy-pages.outputs.pages-url }}
 
