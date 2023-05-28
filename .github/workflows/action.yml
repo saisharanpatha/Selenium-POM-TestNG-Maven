@@ -51,18 +51,7 @@ jobs:
       run: |
           ./allure-2.14.0/bin/allure generate allure-results --clean -o target/allure-report
  
-    - name: Setup assets
-      run: |
-        mkdir public ${{ github.run_number }}
-        mv target/allure-report/* ./${{ github.run_number }}/
-        mv ./${{ github.run_number }} ./public/
-        echo ${{ github.run_id }}
-        
-    - name: Publish HTML report
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-html-report
-        path: ./public
+
 
  #   - name: Create directory for reports
  #     run: mkdir -p target/allure-reports/${{ github.run_number }}
@@ -79,7 +68,18 @@ jobs:
           git config --local user.name "${GITHUB_ACTOR}"
           git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git clone https://github.com/saisharanpatha/Selenium-POM-TestNG-Maven.git -b gh-pages
-
+    - name: Setup assets
+      run: |
+        mkdir public ${{ github.run_number }}
+        mv ./target/allure-report/* ./${{ github.run_number }}/
+        mv ./${{ github.run_number }} ./public/
+        echo ${{ github.run_id }}
+        
+    - name: Publish HTML report
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-html-report
+        path: ./public
     - name: Deploy reports to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
