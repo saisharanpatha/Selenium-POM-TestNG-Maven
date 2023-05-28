@@ -76,7 +76,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-          git -c user.name="${GITHUB_ACTOR}" -c user.email="${GITHUB_ACTOR}@users.noreply.github.com" checkout -b gh-pages
+          git config --local user.name "${GITHUB_ACTOR}"
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git clone https://github.com/saisharanpatha/Selenium-POM-TestNG-Maven.git -b gh-pages
+          git checkout gh-pages
           git pull origin gh-pages
 
     - name: Deploy reports to GitHub Pages
@@ -84,7 +87,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
           git add ./${{ github.run_number }}
-          git -c user.name="${GITHUB_ACTOR}" -c user.email="${GITHUB_ACTOR}@users.noreply.github.com" commit -m "Deploy Allure reports for run ${{ github.run_number }}"
+          git commit -m "Deploy Allure reports for run ${{ github.run_number }}"
           git push origin gh-pages
 
 
