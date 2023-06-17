@@ -55,7 +55,7 @@ jobs:
 
     - name: Print Java installations
       run: |
-          ls -l /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk
+          ls -l /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
 
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
