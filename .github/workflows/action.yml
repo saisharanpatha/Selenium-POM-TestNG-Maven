@@ -55,8 +55,8 @@ jobs:
       uses: andrcuns/allure-publish-action@v2.3.0
       
       env:
-        AWS_ACCESS_KEY_ID: AKIA3OE6SMVF2R3ZONQW
-        AWS_SECRET_ACCESS_KEY: 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
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       with:
         storageType: s3
         resultsGlob: "allure-results"
