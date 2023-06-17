@@ -55,7 +55,7 @@ jobs:
 
     - name: Print Java installations
       run: |
-          ls -l /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+          ls -l /usr/lib/jvm/java-11-openjdk-amd64
 
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
@@ -64,7 +64,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION : ap-south-1
-        JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+        JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
       with:
         storageType: s3
         resultsGlob: "allure-results"
