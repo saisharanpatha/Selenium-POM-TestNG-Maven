@@ -55,7 +55,7 @@ jobs:
 
     - name: Print Java installations
       run: |
-          ls -l /usr/lib/jvm
+          ls -l /usr/lib/jvm/temurin-11-jdk-amd64
     - name: Set JAVA_HOME
       run: echo ${{ env.JAVA_HOME }}
 
@@ -67,7 +67,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION : ap-south-1
-        JAVA_HOME: /usr/lib/jvm/java-11/
+        JAVA_HOME: /usr/lib/jvm/java-11/temurin-11-jdk-amd64/Contents/Home
       with:
         storageType: s3
         resultsGlob: "allure-results"
