@@ -54,7 +54,7 @@ jobs:
         
   deploy:
     runs-on: ubuntu-latest
-
+    needs: test 
     steps:
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
