@@ -50,7 +50,10 @@ jobs:
     - name: Generate HTML report
       run: |
           ./allure-2.14.0/bin/allure generate allure-results --clean -o target/allure-report
- 
+    - name: Print Java installations
+      run: |
+          ls -l /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk
+
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
       
