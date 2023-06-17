@@ -51,7 +51,19 @@ jobs:
       run: |
           ./allure-2.14.0/bin/allure generate allure-results --clean -o target/allure-report
  
-
+    - name: Publish allure report
+      uses: andrcuns/allure-publish-action@v2.3.0
+      
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      with:
+        storageType: s3
+        resultsGlob: "target/allure-report"
+        bucket: sai-allure-reports
+        prefix: ${{ github.run_number }}
+        copyLatest: true
+        ignoreMissingResults: true
 
  #   - name: Create directory for reports
  #     run: mkdir -p target/allure-reports/${{ github.run_number }}
@@ -61,49 +73,49 @@ jobs:
 
 
 
-    - name: Configure GitHub Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-          git config --local user.name "${GITHUB_ACTOR}"
-          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git clone https://github.com/saisharanpatha/Selenium-POM-TestNG-Maven.git -b gh-pages
-    - name: Setup assets
-      run: |
-        mkdir public ${{ github.run_number }}
-        mv ./target/allure-report/* ./${{ github.run_number }}/
-        mv ./${{ github.run_number }} ./public/
-        echo ${{ github.run_id }}
+    #- name: Configure GitHub Pages
+     # env:
+      #  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#      run: |
+ #         git config --local user.name "${GITHUB_ACTOR}"
+  #        git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+   #       git clone https://github.com/saisharanpatha/Selenium-POM-TestNG-Maven.git -b gh-pages
+#    - name: Setup assets
+ #     run: |
+  #      mkdir public ${{ github.run_number }}
+   #     mv ./target/allure-report/* ./${{ github.run_number }}/
+    #    mv ./${{ github.run_number }} ./public/
+     #   echo ${{ github.run_id }}
         
-    - name: Publish HTML report
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-html-report
-        path: ./public
-    - name: Deploy reports to GitHub Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-          git add ./${{ github.run_number }}
-          git commit -m "Deploy Allure reports for run ${{ github.run_number }}"
-          git push origin gh-pages
+#    - name: Publish HTML report
+ #     uses: actions/upload-artifact@v2
+  #    with:
+   #     name: allure-html-report
+    #    path: ./public
+  #  - name: Deploy reports to GitHub Pages
+   #   env:
+    #    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+     # run: |
+      #    git add ./${{ github.run_number }}
+       #   git commit -m "Deploy Allure reports for run ${{ github.run_number }}"
+        #  git push origin gh-pages
 
 
           
-    - name: Get repository information
-      id: repo_info
-      run: |
-          echo "::set-output name=repo::$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)"
-          echo "::set-output name=owner::$(echo $GITHUB_REPOSITORY | cut -d '/' -f 1)"
+#    - name: Get repository information
+ #     id: repo_info
+  #    run: |
+   #       echo "::set-output name=repo::$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)"
+    #      echo "::set-output name=owner::$(echo $GITHUB_REPOSITORY | cut -d '/' -f 1)"
 
-    - name: Set environment variables
-      run: |
-          echo "REPO_NAME=${{ steps.repo_info.outputs.repo }}" >> $GITHUB_ENV
-          echo "REPO_OWNER=${{ steps.repo_info.outputs.owner }}" >> $GITHUB_ENV
+#    - name: Set environment variables
+ #     run: |
+  #        echo "REPO_NAME=${{ steps.repo_info.outputs.repo }}" >> $GITHUB_ENV
+   #       echo "REPO_OWNER=${{ steps.repo_info.outputs.owner }}" >> $GITHUB_ENV
 
-    - name: Display Allure report URL
-      run: |
-          echo "Allure report URL: https://${{ env.REPO_OWNER }}.github.io/${{ env.REPO_NAME }}/${{ github.run_number }}/index.html"
+   # - name: Display Allure report URL
+    #  run: |
+     #     echo "Allure report URL: https://${{ env.REPO_OWNER }}.github.io/${{ env.REPO_NAME }}/${{ github.run_number }}/index.html"
 
           
           
