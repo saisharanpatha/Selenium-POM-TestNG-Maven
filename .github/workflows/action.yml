@@ -51,11 +51,13 @@ jobs:
         name: allure-report
         path: target/allure-report
         if: always()
-        
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test 
-    steps:
+    - name: Remove JAVA_HOME
+      run: sed -i '/JAVA_HOME/d' $GITHUB_ENV
+   
+  #deploy:
+   # runs-on: ubuntu-latest
+    #needs: test 
+    #steps:
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
       
