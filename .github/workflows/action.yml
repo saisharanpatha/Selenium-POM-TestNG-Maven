@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
           java-version: '11'
-          distribution: 'adopt'
+          distribution: 'openjdk'
           cache: 'maven'
 
     - name: Build with Maven
@@ -67,7 +67,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION : ap-south-1
-        JAVA_HOME: /usr/lib/jvm/java-11/temurin-11-jdk-amd64/Contents/Home
       with:
         storageType: s3
         resultsGlob: "allure-results"
