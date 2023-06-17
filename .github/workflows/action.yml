@@ -59,7 +59,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: nMYR3BgbpbwuuMu3G60Q1W9qrIDLtTadKbE0gTTh
       with:
         storageType: s3
-        resultsGlob: "target/allure-report"
+        resultsGlob: "allure-results"
         bucket: sai-allure-reports
         prefix: ${{ github.run_number }}
         copyLatest: true
