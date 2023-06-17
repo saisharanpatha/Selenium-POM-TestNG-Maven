@@ -42,7 +42,7 @@ jobs:
         if: always()
       
     - name: Generate Allure report
-      run: mvn allure:report --file CardUpAutomationFramework/pom.xml -DtestNgXml=${{ github.event.inputs.testNgXml }}
+      run: mvn allure:report
       if: always()
         
     - name: Publish Allure HTML report
