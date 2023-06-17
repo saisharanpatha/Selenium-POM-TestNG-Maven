@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
           java-version: '11'
-          distribution: 'openjdk'
+          distribution: 'adopt'
           cache: 'maven'
 
     - name: Build with Maven
@@ -52,14 +52,10 @@ jobs:
         path: target/allure-report
         if: always()
         
+  deploy:
+    runs-on: ubuntu-latest
 
-    - name: Print Java installations
-      run: |
-          ls -l /usr/lib/jvm/temurin-11-jdk-amd64
-    - name: Set JAVA_HOME
-      run: echo ${{ env.JAVA_HOME }}
-
-
+    steps:
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
       
