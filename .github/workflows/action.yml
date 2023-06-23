@@ -51,15 +51,17 @@ jobs:
         name: allure-report
         path: target/allure-report
         if: always()
-    - name: Remove JAVA_HOME
-      run: sed -i '/JAVA_HOME/d' $GITHUB_ENV
+
    
   deploy:
     runs-on: ubuntu-latest
     needs: test 
 
     steps:
-    - run: mkdir allure-results;cd allure-results
+    - name: Create Dir and View Pwd
+      run: |
+        mkdir allure-results;cd allure-results
+        ls -ltr; pwd
     
     - name: download a Build Artifact
       uses: actions/download-artifact@v2
@@ -78,7 +80,7 @@ jobs:
         bucket: sai-allure-reports
         #prefix: ${{ github.run_number }}
         copyLatest: true
-        ignoreMissingResults: true
+        ignoreMissingResults: false
         
           
           
