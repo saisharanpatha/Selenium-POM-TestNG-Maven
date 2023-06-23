@@ -69,7 +69,8 @@ jobs:
         name: allure-results
         path: allure-results
     - name: Set environment variable
-      run: echo "MY_URL=${{ secrets.ENV_URL }}" >> $GITHUB_ENV
+      env: 
+        MY_URL: ${{ secrets.ENV_URL }}
     - name: Display environment variable
       run: echo $MY_URL
     - name: Publish allure report
