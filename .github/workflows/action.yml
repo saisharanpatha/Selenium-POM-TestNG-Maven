@@ -68,9 +68,12 @@ jobs:
       with:
         name: allure-results
         path: allure-results
+    - name: Set environment variable
+      run: echo "MY_URL=${{ secrets.ENV_URL }}" >> $GITHUB_ENV
+    - name: Display environment variable
+      run: echo $MY_URL
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
-      
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
