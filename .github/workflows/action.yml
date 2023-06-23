@@ -77,7 +77,7 @@ jobs:
         AWS_REGION : ap-south-1
       with:
         storageType: s3
-        resultsGlob: "allure-results/*"
+        resultsGlob: "allure-results"
         bucket: sai-allure-reports
         #prefix: ${{ github.run_number }}
         copyLatest: true
