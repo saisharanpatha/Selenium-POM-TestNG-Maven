@@ -68,11 +68,7 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Set environment variable
-      env: 
-        MY_URL: ${{ secrets.ENV_URL }}
-    - name: Display environment variable
-      run: echo $MY_URL
+
     - name: Publish allure report
       uses: andrcuns/allure-publish-action@v2.3.0
       env:
