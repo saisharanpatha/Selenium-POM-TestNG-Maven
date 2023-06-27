@@ -79,6 +79,7 @@ jobs:
         storageType: s3
         resultsGlob: "allure-results"
         bucket: sai-allure-reports
+        baseUrl: ${{ vars.Allure_Link }}
         #prefix: ${{ github.run_number }}
         copyLatest: true
         ignoreMissingResults: false
